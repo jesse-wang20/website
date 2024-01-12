@@ -14,10 +14,17 @@ function preload(){
     qImg = loadImage('/images/qImg.png')
     marioImg = loadImage('/images/marioImg.png')
     emptyBoxImg = loadImage('images/emptyBoxImg.png')
+    bl_cloud = loadImage('images/bl_cloud.png')
+    bm_cloud = loadImage('images/bm_cloud.png')
+    br_cloud = loadImage('images/br_cloud.png')
+    tl_cloud = loadImage('images/tl_cloud.png')
+    tm_cloud = loadImage('images/tm_cloud.png')
+    tr_cloud = loadImage('images/tr_cloud.png')
+
 }
 
 function setup() {
-    createCanvas(windowWidth, 400);
+    createCanvas(windowWidth, 600);
     world.gravity.y = 40;
     walkable = new Group()
 
@@ -61,6 +68,57 @@ function setup() {
     questionBox3.h = tileSize;
     questionBox3.scale = 2;
 
+    cloudTL = new Group();
+    cloudTL.collider = 'n';
+    cloudTL.image = tl_cloud;
+    cloudTL.tile = 'i';
+    cloudTL.w = tileSize
+    cloudTL.h = tileSize
+    cloudTL.scale = 2;
+
+    cloudTM = new Group();
+    cloudTM.collider = 'n';
+    cloudTM.image = tm_cloud;
+    cloudTM.tile = 'o';
+    cloudTM.w = tileSize
+    cloudTM.h = tileSize
+    cloudTM.scale = 2;
+
+    cloudTR = new Group();
+    cloudTR.collider = 'n';
+    cloudTR.image = tr_cloud;
+    cloudTR.tile = 'p';
+    cloudTM.w = tileSize
+    cloudTR.h = tileSize
+    cloudTR.scale = 2;
+
+    cloudBL = new Group();
+    cloudBL.collider = 'n';
+    cloudBL.image = bl_cloud;
+    cloudBL.tile = 'j';
+    cloudBL.w = tileSize
+    cloudBL.h = tileSize
+    cloudBL.scale = 2;
+
+    cloudBM = new Group();
+    cloudBM.collider = 'n';
+    cloudBM.image = bm_cloud;
+    cloudBM.tile = 'k';
+    cloudBM.w = tileSize
+    cloudBM.h = tileSize
+    cloudBM.scale = 2;
+
+    cloudBR = new Group();
+    cloudBR.collider = 'n';
+    cloudBR.image = br_cloud;
+    cloudBR.tile = ';';
+    cloudBR.w = tileSize
+    cloudBR.h = tileSize
+    cloudBR.scale = 2;
+
+
+
+
     pipeLeft = new Group();
     pipeLeft.collider = 's';
     pipeLeft.image = leftImg;
@@ -68,7 +126,6 @@ function setup() {
     pipeLeft.w = tileSize
     pipeLeft.h = tileSize
     pipeLeft.scale = 2;
-
 
     pipeRight = new Group();
     pipeRight.collider = 's';
@@ -119,62 +176,99 @@ function setup() {
     topJoint.visible = false;
     bottomJoint.visible = false;
 
+    function closeDescription(event) {
+        if (event.target.classList.contains("close-btn")) {
+            event.target.closest(".project-description").remove();
+        }
+    }
+
+    document.addEventListener("click", closeDescription);
+
     top_sensor.overlaps(questionBox1, (s,q) => {
-        q.image = emptyBoxImg
+        // q.image = emptyBoxImg
         let boxX = q.position.x;
         let boxY = q.position.y;
 
         // Create a button element
-        let victoryButton = document.createElement("button");
-        victoryButton.innerText = "1";
-        victoryButton.onclick = function () {
-            // Add any functionality you want when the button is clicked
-            alert("Victory achieved!");
-        };
+        let projectDescription = document.createElement("div");
+        projectDescription.classList.add("project-description");
 
-        // Set the button's position
-        victoryButton.style.position = "absolute";
-        victoryButton.style.left = boxX + "px";
-        victoryButton.style.top = boxY + "px";
+        // Set the content of the description
+        projectDescription.innerHTML = `
+            <div class="title">
+                Computer Science Projects
+                <span class="close-btn">✖</span>
+            </div>
+            <div class="description">
+                <p>
+                    Here are some of my projects:
+                </p>
+                <ul>
+                    <li><a href="ExploreX.html">ExploreX</a></li>
+                    <li><a href="#project2">Autogen X Legion</a></li>
+                </ul>
+            </div>
+        `;
 
-        // Append the button to the body of the HTML document
-        document.body.appendChild(victoryButton);
+        // Set the position of the project description
+        projectDescription.style.position = "absolute";
+        projectDescription.style.left = boxX - 125 + "px";
+        projectDescription.style.top = (boxY - 150) + "px"; // Adjust the vertical position
+
+        // Append the description to the body of the HTML document
+        document.body.appendChild(projectDescription);
     });
 
     top_sensor.overlaps(questionBox2, (s,q) => {
-        q.image = emptyBoxImg
+        // q.image = emptyBoxImg
         let boxX = q.position.x;
         let boxY = q.position.y;
 
         // Create a button element
-        let victoryButton = document.createElement("button");
-        victoryButton.innerText = "2";
-        victoryButton.onclick = function () {
-            // Add any functionality you want when the button is clicked
-            alert("Victory achieved!");
-        };
+        let projectDescription = document.createElement("div");
+        projectDescription.classList.add("project-description");
 
-        // Set the button's position
-        victoryButton.style.position = "absolute";
-        victoryButton.style.left = boxX + "px";
-        victoryButton.style.top = boxY + "px";
+        // Set the content of the description
+        projectDescription.innerHTML = `
+            <div class="title">
+                Leadership
+                <span class="close-btn">✖</span>
+            </div>
+            <div class="description">
+                <p>
+                    Here are some of my projects:
+                </p>
+                <ul>
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                    <!-- Add more project descriptions -->
+                </ul>
+            </div>
+        `;
 
-        // Append the button to the body of the HTML document
-        document.body.appendChild(victoryButton);
+        // Set the position of the project description
+        projectDescription.style.position = "absolute";
+        projectDescription.style.left = boxX + "px";
+        projectDescription.style.top = (boxY - 100) + "px"; // Adjust the vertical position
+
+        // Append the description to the body of the HTML document
+        document.body.appendChild(projectDescription);
     });
 
     new Tiles(
     [
-        '.......................................................................................................................................................................................................................................................................................',
-        '...................................................................................bbbbbbbb...bbb1.......................1.............bbb.....b11b.....................................................................................................................................',
-        '.......................3.............................................................................................................................................................................................bb.................................................................',
-        '....................................................................................................................................................................................................................bbb.................................................................',
+        '..........................iop.........................................................................................................................................................................................................................................................',
+        '....iop...................jk;......................................................bbbbbbbb...bbb1.......................1.............bbb.....b11b.....................................................................................................................................',
+        '....jk;.........iop..................................................................................................................................................................................................bb.................................................................',
+        '................jk;.................................................................................................................................................................................................bbb.................................................................',
         '...................................................................................................................................................................................................................bbbb.................................................................',
-        '................1....b2b3b...................................................b1b.................1.....b1.....bb......1..1..1......b............bb................................................................bbbbb.................bb..............................................',
-        '...............................................lr.........lr.............................................................................................b..b............bb..b...................................bbbbbb................bbbb.............................................',
-        '.......................................lr......LR.........LR............................................................................................bb..bb..........bbb..bb..............bb1b...............bbbbbbb...............bbbbbb............................................',
-        '............................lr.........LR......LR.........LR...........................................................................................bbb..bbb........bbbb..bbb.......lr...................lr.bbbbbbbb...............bbbbbb............................................',
-        '............................LR.........LR......LR.........LR..........................................................................................bbbb..bbbb......bbbbb..bbbb......LR...................LRbbbbbbbbb.........b.....bbbbbb............................................',
+        '..............................................................................................................................................................................................................................................................................................',        '..............................................................................................................................................................................................................................................................................................',
+        '...........1......2......3........................................................b1b.................1.....b1.....bb......1..1..1......b............bb...........................................................bbbbb.................bb..............................................',
+        '.................................................lr.........lr.............................................................................................b..b............bb..b...................................bbbbbb................bbbb.............................................',
+        '.........................................lr......LR.........LR............................................................................................bb..bb..........bbb..bb..............bb1b...............bbbbbbb...............bbbbbb............................................',
+        '..............................lr.........LR......LR.........LR...........................................................................................bbb..bbb........bbbb..bbb.......lr...................lr.bbbbbbbb...............bbbbbb............................................',
+        '..............................LR.........LR......LR.........LR..........................................................................................bbbb..bbbb......bbbbb..bbbb......LR...................LRbbbbbbbbb.........b.....bbbbbb............................................',
+        '..............................LR.........LR......LR.........LR..........................................................................................bbbb..bbbb......bbbbb..bbbb......LR...................LRbbbbbbbbb.........b.....bbbbbb............................................',
         '======================================================================..===============...=================================================================================..===========================================================================================================',
         '======================================================================..===============...=================================================================================..===========================================================================================================',
     ],
@@ -187,7 +281,7 @@ function draw(){
     clear()
     background(148,148,255)
     moveMario()
-
+    mario.draw()
 }
 
 function moveMario(){

@@ -1,0 +1,89 @@
+.project-description {
+    background-color: #fdffba;
+    border: 3px solid #db0000;
+    padding: 20px;
+    width: 200px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    position: absolute;
+    border-radius: 15px; /* Adding rounded corners */
+}
+
+.project-description .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #db0000;
+    margin-bottom: 15px;
+}
+
+.project-description .description {
+    font-size: 16px;
+    color: #000;
+}
+
+.project-description ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.project-description li {
+    padding: 5px 0;
+}
+
+@font-face {
+    font-family: 'Mario Header';
+    src: url('super-mario-bros.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Mario Body';
+    src: url('super-mario-bros-alphabet.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(148, 148, 255);
+}
+
+
+header {
+    text-align: center;
+    padding: 20px; /* Optional: Add padding around the header */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin to ensure centered alignment */
+}
+
+/* Customize further to match Mario-style design */
+.logo-box {
+    background-color: #cc5628;
+    width: fit-content; 
+    padding: 10px; 
+    border-radius: 8px; 
+    margin-top: 20px;
+}
+
+.logo-text {
+    font-family: 'Mario Header', Arial, sans-serif; /* Use your Super Mario font here */
+    color: #f8e3c6; /* Yellow text color */
+    font-size: 36px; /* Adjust font size */
+    line-height: 40px; /* Adjust line height */
+    text-align: center; /* Center the text */
+    text-transform: uppercase; /* Uppercase text */
+    margin: 0; /* Remove default margin */
+}
+
+.instructions {
+    font-family: 'Mario Body', Arial, sans-serif; /* Use your Super Mario font here */
+    font-size: 36px; /* Adjust font size */
+    line-height: 40px; /* Adjust line height */
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove default margin */
+    letter-spacing: 2px;
+}
