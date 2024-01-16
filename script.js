@@ -204,8 +204,8 @@ function setup() {
                     Here are some of my projects:
                 </p>
                 <ul>
-                    <li><a href="ExploreX.html">ExploreX</a></li>
-                    <li><a href="#project2">Autogen X Legion</a></li>
+                    <li><a href="projects/ExploreX/ExploreX.html">ExploreX</a></li>
+                    <li><a href="projects/AutogenXLegion/AutogenXLegion.html">Autogen X Legion</a></li>
                 </ul>
             </div>
         `;
@@ -236,12 +236,11 @@ function setup() {
             </div>
             <div class="description">
                 <p>
-                    Here are some of my projects:
+                    Leadership and Extra Curriculars:
                 </p>
                 <ul>
-                    <li>Project 1</li>
-                    <li>Project 2</li>
-                    <!-- Add more project descriptions -->
+                    <li><a href="projects/ExploreX/ExploreX.html">Society of Asian Scientists and Engineers</a></li>
+                    <li><a href="projects/AutogenXLegion/AutogenXLegion.html">College of Engineering and Applied Sciences</a></li>
                 </ul>
             </div>
         `;
