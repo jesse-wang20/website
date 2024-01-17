@@ -239,8 +239,8 @@ function setup() {
                     Leadership and Extra Curriculars:
                 </p>
                 <ul>
-                    <li><a href="projects/ExploreX/ExploreX.html">Society of Asian Scientists and Engineers</a></li>
-                    <li><a href="projects/AutogenXLegion/AutogenXLegion.html">College of Engineering and Applied Sciences</a></li>
+                    <li><a href="leadership_EC/CEAS/ceas.html">Society of Asian Scientists and Engineers</a></li>
+                    <li><a href="leadership_EC/SASE/sase.html">College of Engineering and Applied Sciences</a></li>
                 </ul>
             </div>
         `;
