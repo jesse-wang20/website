@@ -1,0 +1,32 @@
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event {
+    border-left: 2px solid #555;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.event img {
+    max-width: 300px;
+    /* border-radius: 50%; */
+    margin-right: 20px;
+}
+
+.event-content {
+    flex: 1;
+}
+
+.event h2 {
+    margin-top: 0;
+}
+
+.event p {
+    margin-bottom: 0;
+}

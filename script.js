@@ -189,11 +189,9 @@ function setup() {
         let boxX = q.position.x;
         let boxY = q.position.y;
 
-        // Create a button element
         let projectDescription = document.createElement("div");
         projectDescription.classList.add("project-description");
 
-        // Set the content of the description
         projectDescription.innerHTML = `
             <div class="title">
                 Computer Science Projects
@@ -210,12 +208,10 @@ function setup() {
             </div>
         `;
 
-        // Set the position of the project description
         projectDescription.style.position = "absolute";
         projectDescription.style.left = boxX - 125 + "px";
-        projectDescription.style.top = (boxY - 150) + "px"; // Adjust the vertical position
+        projectDescription.style.top = (boxY - 150) + "px"; 
 
-        // Append the description to the body of the HTML document
         document.body.appendChild(projectDescription);
     });
 
@@ -224,33 +220,29 @@ function setup() {
         let boxX = q.position.x;
         let boxY = q.position.y;
 
-        // Create a button element
         let projectDescription = document.createElement("div");
         projectDescription.classList.add("project-description");
 
-        // Set the content of the description
         projectDescription.innerHTML = `
             <div class="title">
-                Leadership
+                Leadership and Extra Curriculars
                 <span class="close-btn">✖</span>
             </div>
             <div class="description">
                 <p>
-                    Leadership and Extra Curriculars:
+                    Check out my involvement in various organizations on campus!
                 </p>
                 <ul>
-                    <li><a href="leadership_EC/CEAS/ceas.html">Society of Asian Scientists and Engineers</a></li>
-                    <li><a href="leadership_EC/SASE/sase.html">College of Engineering and Applied Sciences</a></li>
+                    <li><a href="leadership_EC/SASE/sase.html">Society of Asian Scientists and Engineers</a></li>
+                    <li><a href="leadership_EC/CEAS/ceas.html">College of Engineering and Applied Sciences</a></li>
                 </ul>
             </div>
         `;
 
-        // Set the position of the project description
         projectDescription.style.position = "absolute";
-        projectDescription.style.left = boxX + "px";
-        projectDescription.style.top = (boxY - 100) + "px"; // Adjust the vertical position
+        projectDescription.style.left = boxX - 125 + "px";
+        projectDescription.style.top = (boxY - 150) + "px"; 
 
-        // Append the description to the body of the HTML document
         document.body.appendChild(projectDescription);
     });
 

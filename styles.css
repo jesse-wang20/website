@@ -6,7 +6,7 @@
     font-family: 'Arial', sans-serif;
     text-align: center;
     position: absolute;
-    border-radius: 15px; /* Adding rounded corners */
+    border-radius: 15px;
 }
 
 .project-description .title {
@@ -50,40 +50,39 @@ body {
     background-color: rgb(148, 148, 255);
 }
 
-
 header {
     text-align: center;
-    padding: 20px; /* Optional: Add padding around the header */
+    padding: 20px;
 }
 
 header h1 {
-    margin: 0; /* Remove default margin to ensure centered alignment */
+    margin: 0;
 }
 
-/* Customize further to match Mario-style design */
 .logo-box {
     background-color: #cc5628;
-    width: fit-content; 
-    padding: 10px; 
-    border-radius: 8px; 
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
     margin-top: 20px;
 }
 
 .logo-text {
-    font-family: 'Mario Header', Arial, sans-serif; /* Use your Super Mario font here */
-    color: #f8e3c6; /* Yellow text color */
-    font-size: 36px; /* Adjust font size */
-    line-height: 40px; /* Adjust line height */
-    text-align: center; /* Center the text */
-    text-transform: uppercase; /* Uppercase text */
-    margin: 0; /* Remove default margin */
+    font-family: 'Mario Header', Arial, sans-serif;
+    color: #f8e3c6;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 .instructions {
-    font-family: 'Mario Body', Arial, sans-serif; /* Use your Super Mario font here */
-    font-size: 36px; /* Adjust font size */
-    line-height: 40px; /* Adjust line height */
-    text-align: center; /* Center the text */
-    margin: 0; /* Remove default margin */
+    font-family: 'Mario Body', Arial, sans-serif;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0;
     letter-spacing: 2px;
 }
+
