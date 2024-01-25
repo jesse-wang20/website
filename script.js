@@ -210,7 +210,7 @@ function setup() {
 
         projectDescription.style.position = "absolute";
         projectDescription.style.left = boxX - 125 + "px";
-        projectDescription.style.top = (boxY - 150) + "px"; 
+        projectDescription.style.top = (boxY - 100) + "px"; 
 
         document.body.appendChild(projectDescription);
     });
@@ -242,6 +242,37 @@ function setup() {
         projectDescription.style.position = "absolute";
         projectDescription.style.left = boxX - 125 + "px";
         projectDescription.style.top = (boxY - 150) + "px"; 
+
+        document.body.appendChild(projectDescription);
+    });
+
+    top_sensor.overlaps(questionBox3, (s,q) => {
+        // q.image = emptyBoxImg
+        let boxX = q.position.x;
+        let boxY = q.position.y;
+
+        let projectDescription = document.createElement("div");
+        projectDescription.classList.add("project-description");
+
+        projectDescription.innerHTML = `
+            <div class="title">
+                Former Internships
+                <span class="close-btn">✖</span>
+            </div>
+            <div class="description">
+                <p>
+                    Here are some of my previous internships and my experiences with them!
+                </p>
+                <ul>
+                    <li><a href="experience/asurion/asurion.html"> Asurion </a></li>
+                    <li><a href="experience/boeing/boeing.html"> Boeing </a></li>
+                </ul>
+            </div>
+        `;
+
+        projectDescription.style.position = "absolute";
+        projectDescription.style.left = boxX - 125 + "px";
+        projectDescription.style.top = (boxY - 125) + "px"; 
 
         document.body.appendChild(projectDescription);
     });
